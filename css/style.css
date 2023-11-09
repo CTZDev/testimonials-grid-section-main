@@ -10,4 +10,107 @@
 
 .container {
   font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fsize);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 72px 24px;
+}
+
+.card {
+  padding: 24px 34px 36px 32px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 6px;
+  border-radius: 16px;
+}
+
+.card-purple {
+  background-color: var(--primary-moderate-violet);
+  color: var(--neutral-light-grayish-blue);
+}
+
+.card-gray {
+  background-color: var(--primary-very-dark-grayish-blue);
+  color: var(--neutral-light-grayish-blue);
+}
+
+.card-light {
+  background-color: var(--primary-white);
+  color: var(--primary-very-dark-grayish-blue);
+}
+
+.card-black {
+  background-color: var(--primary-very-dark-blackish-blue);
+  color: var(--neutral-light-grayish-blue);
+}
+
+.card-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  & img {
+    width: 36px;
+    border-radius: 100vw;
+    border: 2px solid hsl(263, 55%, 65%);
+  }
+}
+
+.card-gray .card-user > img {
+  border: 2px solid hsl(217, 19%, 48%);
+}
+
+.card-black .card-user > img {
+  border: 2px solid hsl(219, 29%, 27%);
+}
+
+.card-light .card-user > img {
+  border: 2px solid hsl(210, 46%, 100%);
+}
+
+.card-user-content {
+  & p {
+    font-weight: 600;
+
+    & span {
+      font-weight: 500;
+      padding-top: 2px;
+      display: block;
+      color: hsla(0, 0%, 85%, 0.5);
+    }
+  }
+}
+
+.card-light .card-user-content span {
+  color: inherit;
+}
+
+.card-content {
+  & h2 {
+    padding: 22px 0;
+    font-weight: 600;
+  }
+
+  & p {
+    font-weight: 500;
+    opacity: 0.7;
+    line-height: 1.5;
+    padding-right: 8px;
+  }
+}
+
+.card-quote {
+  position: absolute;
+  right: 24px;
+  top: 0;
+  opacity: 0.75;
+  z-index: -1;
 }
